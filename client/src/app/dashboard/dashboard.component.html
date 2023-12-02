@@ -1,0 +1,16 @@
+<div *ngIf="showDashboard" class="fixed">
+    <nav id="sidebarMenu" class="collapse d-lg-block sidebar collapse bg-purple-200 ">
+      <div class="position-sticky ">
+        <div class="list-group list-group-flush mx-3 mt-4 ">
+         <h4 class="list-group-item list-group-item-action rounded py-2 ripple ">DashBoard</h4>
+         <p-panelMenu [model]="items" class="list-group-item list-group-item-action rounded py-2 ripple " ></p-panelMenu>
+        </div>
+      </div>
+    </nav>
+  
+  <main style="margin-top: 58px;">
+    <div class="container pt-4">
+      <!-- <app-attendance></app-attendance> -->
+    </div>
+  </main>
+</div>

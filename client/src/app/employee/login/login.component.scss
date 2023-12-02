@@ -1,0 +1,44 @@
+$secondary: #a04ee8;
+
+.container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+
+  .form {
+    background-color: aliceblue;
+    border-radius: 1rem;
+    padding: 5rem;
+    margin: 5rem;
+    box-shadow:
+      0 4px 8px 0 rgba(0, 0, 0, 0.2),
+      0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    text-align: center;
+
+    .login-form {
+      display: flex;
+      flex-direction: column;
+      gap: 1.5rem;
+    }
+
+    .item {
+      display: flex;
+      align-items: flex-start;
+      flex-direction: column;
+   
+      input {
+        padding: 5px;
+        border: none;
+        border-bottom: 2px solid $secondary;
+        background-color: transparent;
+        height: 3.5vh;
+      }
+    }
+    .btn {
+      background-color: $secondary;
+      color: #ffff;
+      
+    }
+  }
+}

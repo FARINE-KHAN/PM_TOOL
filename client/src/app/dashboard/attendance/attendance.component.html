@@ -1,0 +1,11 @@
+
+<div class="flex justify-content-center align-content-center mt-8 ml-8">
+    <div *ngIf="!changeToCheckout" class="card w-10rem h-10rem flex  align-items-center justify-content-center" (click)="onClickToCheckOut()">
+        <p class="font-bold">Check In!</p>
+        <i class="pi pi-sign-in" style="font-size: 2.5rem"></i>
+    </div>
+    <div *ngIf="changeToCheckout" class="card w-10rem h-10rem flex  align-items-center justify-content-center" (click)="onClickToCheckIn()">
+        <p class="font-bold">Check out!</p>
+        <i class="pi pi-sign-out" style="font-size: 2.5rem"></i>
+    </div>
+</div>

@@ -1,0 +1,85 @@
+$secondary: #a04ee8;
+
+.container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .form {
+        width: 50vw;
+        background-color: aliceblue;
+        border-radius: 1rem;
+        padding: 5rem 5rem 1rem 5rem;
+        margin: 5rem;
+        box-shadow:
+            0 4px 8px 0 rgba(0, 0, 0, 0.2),
+            0 6px 20px 0 rgba(0, 0, 0, 0.19);
+
+        .register-form {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 1rem;
+            //   flex-direction: column;
+        }
+
+        .item {
+            display: flex;
+            align-items: flex-start;
+            flex-direction: column;
+
+            input {
+                padding: 5px;
+                border: none;
+                border-bottom: 2px solid $secondary;
+                background-color: transparent;
+                height: 3.5vh;
+            }
+
+            ::ng-deep {
+                // Style the dropdown container
+                .ui-dropdown {
+                  width: 200px; // Adjust the width as needed
+                }
+              
+                // Style the dropdown button or trigger
+                .ui-dropdown-trigger {
+                  background-color: #3498db;
+                  color: #fff;
+                  padding: 10px;
+                  cursor: pointer;
+                }
+              
+                // Style the dropdown menu
+                .ui-dropdown-panel {
+                  background-color: #fff;
+                  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+                }
+              
+                // Style individual items in the dropdown menu
+                .ui-dropdown-item {
+                  padding: 12px;
+                  color: #333;
+                }
+              
+                // Highlight the item on hover
+                .ui-dropdown-item:hover {
+                  background-color: #f1f1f1;
+                }
+              }
+              
+           
+            
+        
+            
+        }
+        .btndiv {
+            text-align: center;
+            padding-top: 7rem;
+            .btn {
+                background-color: $secondary;
+                color: #ffff;
+            }
+        }
+    }
+}

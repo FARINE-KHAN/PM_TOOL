@@ -1,0 +1,46 @@
+<div class="container">
+    <div class="form">
+        <form [formGroup]="registerForm" class="register-form ">
+            <div class="item">
+                <label>First Name</label>
+                <input  formControlName="firstName"  />
+                <div *ngIf="submitted && registerForm.controls['firstName'].hasError('required')">firstName is required</div>
+            </div >  
+              <div class="item ">
+                <label>Last Name</label>
+                <input  formControlName="lastName"  />
+            </div>   
+             <div  class="item">
+                <label>Email</label>
+                <input  formControlName="email" type="email" />
+                <div *ngIf="submitted && registerForm.controls['email'].hasError('required')">email is required</div>
+            </div>  
+            <div  class="item">
+                <label>Passowrd</label>
+                <input  formControlName="password" type="password" />
+                <div *ngIf="submitted && registerForm.controls['password'].hasError('required')">password is required</div>
+                <div *ngIf="submitted && registerForm.controls['password'].hasError('requiredPattern')">Password must be at
+                    least 6
+                    characters</div>
+
+            </div> 
+            <div  class="item">
+                <label>Confirm Passowrd</label>
+                <input  formControlName="confirmPassword" type="password" />
+                <div *ngIf="submitted && registerForm.controls['confirmPassword'].hasError('required')">Confirm Passowrd is required</div>
+                <div *ngIf="submitted && registerForm['hasError']('passwordMismatch')">Passwords do not match</div>
+
+
+            </div> 
+            <div  class="item">
+                <p-dropdown formControlName="role" [options]="roles" optionLabel="name" placeholder=""></p-dropdown> 
+                <div *ngIf="submitted && registerForm.controls['role'].errors">role is required</div>
+            </div>
+            
+        </form>
+        <div class="btndiv">
+            <button (click)="submit()"  class="btn mb-1">Register</button>
+            <p class="message">Already Register?<a [routerLink]="['/login']"> Login</a></p>
+        </div>
+    </div>
+</div>

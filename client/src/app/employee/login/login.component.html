@@ -1,0 +1,21 @@
+<div class="container">
+    <!-- <p-toast></p-toast> -->
+    <div class="form">
+        <form [formGroup]="loginForm" class="login-form">
+            <div class="item">
+                <label>Employee-Id</label>
+                <input formControlName="employeeId" type="text" />
+                <div *ngIf="submitted && loginForm.controls['employeeId'].errors">employeeId is required</div>
+            </div>
+            <div class="item">
+                <label>Password</label>
+                <input formControlName="password" type="password" />
+                <div *ngIf="submitted && loginForm.controls['password'].errors">password is required</div>
+            </div>
+            <div >
+                <button (click)="login()" class="btn mb-1">Login</button>
+                <p class="message" [routerLink]="['/register']">New Member? Register</p>
+            </div>
+        </form>
+    </div>
+</div>
