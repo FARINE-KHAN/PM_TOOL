@@ -1,55 +1,45 @@
-<div class="menu toolbar menu-sidebar" >
-    <i class="fas fa-solid fa-bars mx-2 p-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
-        aria-controls="offcanvasExample"></i>
-    <h5>You have been logged in Illusion Dental Lab</h5>
+<div class="menu toolbar menu-sidebar">
+  <i class="fas fa-solid fa-bars mx-2 p-2" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+    aria-controls="offcanvasExample"></i>
+  <h5>You have been logged in PM Tool-2023</h5>
 </div>
-<div class="offcanvas offcanvas-start" style="width: 15vw; z-index: 1111;" tabindex="-1" id="offcanvasExample"
-    aria-labelledby="offcanvasExampleLabel">
-    <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasExampleLabel">Self Serve</h5>
-        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+
+<div class="offcanvas offcanvas-start" style="width: 15vw; z-index: 1211;" tabindex="-1" id="offcanvasExample"
+  aria-labelledby="offcanvasExampleLabel">
+  <div class="offcanvas-header">
+    <img class="user-img" src="assets/public/pmtool.jpg">
+    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+  </div>
+
+  <div class="offcanvas-body d-flex flex-column align-items-sm-start justify-content-between">
+    <div class="w-100">
+      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100" id="menu">
+        <li class="nav-item w-100" data-bs-dismiss="offcanvas">
+          <a [routerLink]="['/home']" class="nav-link align-middle px-0">
+            <i class="fas fa-solid fa-house mx-2"></i> <span class="ms-1 d-sm-inline w-100">Home</span>
+          </a>
+        </li>
+        <li class="nav-item w-100" data-bs-dismiss="offcanvas">
+          <a [routerLink]="['/home']" class="nav-link align-middle px-0">
+            <i class="fas fa-solid fa-house mx-2"></i> <span class="ms-1 d-sm-inline w-100">Home</span>
+          </a>
+        </li>
+      </ul>
     </div>
-    <div class="offcanvas-body d-flex flex-column align-items-sm-start justify-content-between">
-        <div class="w-100">
-          
-            <!-- <ng-template #defaultImage>
-                <img class="user-img" src="assets/images/1.jpg">
-            </ng-template> -->
 
-            <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100"
-                id="menu">
-                <li class="nav-item w-100" data-bs-dismiss="offcanvas">
-                    <a [routerLink]="['/home']" class="nav-link align-middle px-0">
-                        <i class="fas fa-solid fa-house mx-2"></i> <span class="ms-1 d-sm-inline w-100">Home</span>
-                    </a>
-                </li>
-                <!-- <li class="nav-item w-100" style="cursor: pointer" data-bs-dismiss="offcanvas">
-                    <a class="nav-link align-middle px-0" [routerLink]="['/work_area/case-search']">
-                        <i class="fas fa-file mx-2"></i> <span class="ms-1 d-sm-inline">Case
-                            Search</span>
-                    </a>
-                </li> -->
-                <!-- <li class="nav-item w-100" style="cursor: pointer" data-bs-dismiss="offcanvas">
-                    <a class="nav-link align-middle px-0" [routerLink]="['/work_area/book-scan']">
-                        <i class="fas fa-file mx-2"></i> <span class="ms-1 d-sm-inline">Book Scan</span>
-                    </a>
-                </li> -->
-
-            </ul>
-        </div>
-        <div>
-            <ul id="menu">
-                <li class="nav-item w-100" style="cursor: pointer;">
-                    <a class="nav-link align-middle px-0">
-                        <i class="fas fa-right-from-bracket mx-2"></i> <span class="ms-1 d-sm-inline">Log
-                            Out</span>
-                    </a>
-                </li>
-            </ul>
-        </div>
-
+    <div class="w-100">
+      <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100" id="menu">
+        <li class="nav-item w-100" data-bs-dismiss="offcanvas"
+          style="border: 2px solid red; border-radius: 8px; padding: 5px;">
+          <a [routerLink]="['/login']" class="nav-link align-middle px-0">
+            <i class="fa-solid fa-right-from-bracket mx-2"></i> <span class="ms-1 d-sm-inline w-100">Log Out</span>
+          </a>
+        </li>
+      </ul>
     </div>
+
+  </div>
 </div>
 <div class="col">
-    <router-outlet></router-outlet>
+  <router-outlet></router-outlet>
 </div>

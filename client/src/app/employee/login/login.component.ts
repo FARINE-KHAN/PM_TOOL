@@ -28,21 +28,28 @@ export class LoginComponent implements OnInit {
   }
 
   login() {
-    this.submitted=true;
-    if (this.loginForm.invalid) {
-      return;
+    const items:any = {
+      name: "muhaz",
+      token: "asdfghjk1234cSdfr"
     }
-    let loginData = this.loginForm.value;
-    return this.http.post(serverPath.login, loginData).subscribe(userData => {
-      sessionStorage.setItem("user", JSON.stringify(userData));
-      this.router.navigate(['/dashboard']);
-      
- //   this.submitted=false;
 
-    }, ((err) => {
-      console.log(err)
-    })
-    )
+    const itemsString = JSON.stringify(items);
+    sessionStorage.setItem("user", itemsString);
+          this.router.navigate(['/home']);
+//     this.submitted=true;
+//     if (this.loginForm.invalid) {
+//       return;
+//     }
+//     let loginData = this.loginForm.value;
+//     return this.http.post(serverPath.login, loginData).subscribe(userData => {
+//       sessionStorage.setItem("user", JSON.stringify(userData));
+      
+//  //   this.submitted=false;
+
+//     }, ((err) => {
+//       console.log(err)
+//     })
+//     )
 
   }
 }

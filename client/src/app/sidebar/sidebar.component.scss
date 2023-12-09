@@ -1,84 +1,114 @@
-#menu .nav-item a.nav-link {
-    color: white;
-    color: black;
-    text-decoration: none;
-    width: 100%;
-    transition: all 0.3s ease-in-out;
-}
-
 #menu {
-    list-style-type: none;
+  list-style-type: none;
+
+  .nav-item {
+    padding: 5px;
+    a.nav-link {
+      color: white;
+      color: black;
+      text-decoration: none;
+      width: 100%;
+      transition: all 0.3s ease-in-out;
+    }
+  }
+
+  li:hover {
+    background-color: rgb(202, 202, 202);
+    border-radius: 8px;
+    border: none !important;
+  }
 }
 
 .toolbar {
-    padding: 5px;
-    display: flex;
-    align-items: center;
-    gap: 1rem;
-    background-color: #e9e9e9;
-}
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  background-color: #e9e9e9;
 
-.toolbar i {
+  i {
     font-size: large;
-}
+  }
 
-.toolbar h5{
+  h5 {
     color: gray;
     font-size: medium;
+  }
 }
 
 .user-img {
-    width: 4vw;
-    border-radius: 50px;
-    margin-bottom: 0.5rem;
+  width: 4vw;
+  border-radius: 50px;
+  margin-bottom: 0.5rem;
 }
 
-.profile h4{
+.profile {
+  h4 {
     font-size: medium;
     font-weight: 500;
     margin: 0%;
     padding: 0%;
-}
+  }
 
-.profile p {
+  p {
     font-size: medium;
     color: gray;
     margin: 0%;
     padding: 0%;
-}
-.menu-sidebar{
-    -webkit-transition-duration: 500ms;
-    transition-duration: 500ms;
-    /* background-color: #ffffff; */
-    width: 100%;
-    height: 50px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    z-index: 1110;
-    /* border-bottom: 1px solid #ebebeb; */
+  }
+
+  img {
+    width: 25%;
+  }
+
+  h4 {
+    font-size: 13px;
+  }
+
+  p {
+    font-size: 11px;
+  }
 }
 
-@media (max-width: 768px) {
+.offcanvas-header img {
+  width: 3vw;
+}
+
+.menu-sidebar {
+  -webkit-transition-duration: 500ms;
+  transition-duration: 500ms;
+  width: 100%;
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1110;
+
+  @media (max-width: 768px) {
     .toolbar {
-        gap: 0.5rem;
+      gap: 0.5rem;
     }
 
     .offcanvas {
-        width: 15vw;
-        transition: all 0.03s ease-in-out;
+      width: 15vw;
+      transition: all 0.03s ease-in-out;
     }
 
     .profile img {
-        width: 25%;
+      width: 25%;
     }
 
     .profile h4 {
-        font-size: 13px;
+      font-size: 13px;
     }
 
     .profile p {
-        font-size: 11px;
+      font-size: 11px;
     }
+  }
+}
+
+.col {
+  margin-top: 2.5rem;
 }

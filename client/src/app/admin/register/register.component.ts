@@ -55,7 +55,7 @@ export class RegisterComponent implements OnInit {
     delete registerData.team;
 
     return this.http.post(serverPath.register, registerData).subscribe(userData => {
-      this.router.navigate(['/employee/login']);
+      this.router.navigate(['/login']);
 
     }, ((err) => {
       console.log(err)
