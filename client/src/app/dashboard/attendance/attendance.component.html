@@ -1,11 +1,26 @@
 
-<div class="flex justify-content-center align-content-center mt-8 ml-8">
-    <div *ngIf="!changeToCheckout" class="card w-10rem h-10rem flex  align-items-center justify-content-center" (click)="onClickToCheckOut()">
-        <p class="font-bold">Check In!</p>
-        <i class="pi pi-sign-in" style="font-size: 2.5rem"></i>
+<div class="container ">
+    <div class="subContainer">
+    <div class=" flex justify-content-center">
+        <img [src]="userImage" alt="loading" class="w-3">
     </div>
-    <div *ngIf="changeToCheckout" class="card w-10rem h-10rem flex  align-items-center justify-content-center" (click)="onClickToCheckIn()">
-        <p class="font-bold">Check out!</p>
-        <i class="pi pi-sign-out" style="font-size: 2.5rem"></i>
+    <div *ngIf="!changeToCheckout" class="check flex px-7 py-5 align-items-center justify-content-center " style="gap: 1rem;" (click)="onClickToCheckOut()">
+     
+        <h2 class="font-bold">Check In!</h2>
+        <h4></h4>
+        <i class="pi pi-sign-in" ></i>
+    </div>
+    <div *ngIf="changeToCheckout" class="check flex px-7 py-5 align-items-center justify-content-center" style="gap: 1rem;" (click)="onClickToCheckIn()">
+        <h2 class="font-bold">Check Out! </h2>
+      <h4> {{checkindate | date:"h:mm:ss a"}}</h4> 
+        <h4>{{timerDisplay}}</h4>
+        <i class="pi pi-sign-out"></i>
     </div>
 </div>
+</div>
+<!-- <div class="container">
+    <h1>
+        hellow
+
+    </h1>
+</div> -->

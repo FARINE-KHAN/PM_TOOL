@@ -15,8 +15,8 @@
     <div class="w-100">
       <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100" id="menu">
         <li class="nav-item w-100" data-bs-dismiss="offcanvas">
-          <a [routerLink]="['/home']" class="nav-link align-middle px-0">
-            <i class="fas fa-solid fa-house mx-2"></i> <span class="ms-1 d-sm-inline w-100">Home</span>
+          <a [routerLink]="['/attendance']" class="nav-link align-middle px-0">
+            <i class="fas fa-solid fa-house mx-2"></i> <span class="ms-1 d-sm-inline w-100">attendance</span>
           </a>
         </li>
         <li class="nav-item w-100" data-bs-dismiss="offcanvas">
@@ -31,7 +31,7 @@
       <ul class="nav nav-pills flex-column mb-sm-auto mb-0 align-items-center align-items-sm-start w-100" id="menu">
         <li class="nav-item w-100" data-bs-dismiss="offcanvas"
           style="border: 2px solid red; border-radius: 8px; padding: 5px;">
-          <a [routerLink]="['/login']" class="nav-link align-middle px-0">
+          <a (click)="logout()" class="nav-link align-middle px-0">
             <i class="fa-solid fa-right-from-bracket mx-2"></i> <span class="ms-1 d-sm-inline w-100">Log Out</span>
           </a>
         </li>

@@ -16,8 +16,8 @@ const routes: Routes = [
     children: [
       { path: '', redirectTo: 'home', pathMatch: 'full' },
       { path: 'home', component: DashboardComponent },
-      { path: 'employee/login',loadChildren: () => import('../employee/login/login.module').then((m) => m.LoginModule)},
       { path: 'register',loadChildren: () => import('./register/register.module').then((m) => m.RegisterModule)},
+      { path: 'attendance',loadChildren: () => import('../dashboard/attendance/attendance.module').then((m) => m.AttendanceModule)},
 
     ],
   },

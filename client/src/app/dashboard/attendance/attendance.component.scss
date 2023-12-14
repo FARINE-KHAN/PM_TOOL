@@ -1,7 +1,26 @@
-p{
-    // display: flex;
-    // align-items: center;
-    // justify-content: center;
-// padding-left: 20rem;
-// padding-top: 20rem;
+.container {
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    .subContainer {
+        background: rgb(211, 187, 225);
+        padding: 10px;
+        border-radius: 25px;
+        padding-top: 25px;
+        .check {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            h2 {
+                font-size: 3em;
+            }
+            i {
+                font-size: 2rem;
+                font-weight: bolder;
+            }
+        }
+    }
 }
